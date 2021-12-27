@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+  <genre name="Comedy">
+    <collection>
+      <dvd>Free Guy</dvd>
+      <price>9.99</price>
+    </collection>
+    <collection>
+      <dvd>Scary Movie 2</dvd>
+      <price>7.00</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>Friends</dvd>
+      <price>75.00</price>
+    </collection>
+  </genre>
+  <genre name="Drama">
+    <collection>
+      <dvd>Sweet November</dvd>
+      <price>9.99</price>
+    </collection>
+    <collection>
+      <dvd>Forrest Gump</dvd>
+      <price>11.99</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>Gilmore Girls</dvd>
+      <price>89.99</price>
+    </collection>
+  </genre>
+  <genre name="Romance">
+    <collection>
+      <dvd>Somewhere in Time</dvd>
+      <price>12.99</price>
+    </collection>
+    <collection>
+      <dvd>Titanic</dvd>
+      <price>12.99</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>Outlander</dvd>
+      <price>125.00</price>
+    </collection>
+  </genre>
+  <genre name="Horror">
+    <collection>
+      <dvd>The Exorcist</dvd>
+      <price>7.50</price>
+    </collection>
+    <collection>
+      <dvd>The Sixth Sense</dvd>
+      <price>9.99</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>American Horror Stories</dvd>
+      <price>100.00</price>
+    </collection>
+  </genre>
+  <genre name="Action">
+    <collection>
+      <dvd>Gladiator</dvd>
+      <price>9.99</price>
+    </collection>
+    <collection>
+      <dvd>The Last Duel</dvd>
+      <price>16.99</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>Buffy The Vampire Slayer</dvd>
+      <price>79.99</price>
+    </collection>
+  </genre>
+  <genre name="Sci-fi">
+    <collection>
+      <dvd>Star Wars: Episode III</dvd>
+      <price>19.99</price>
+    </collection>
+    <collection>
+      <dvd>The Butterfly Effect</dvd>
+      <price>16.99</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>The Mandalorian</dvd>
+      <price>25.00</price>
+    </collection>
+  </genre>
+<genre name="Classic">
+    <collection>
+      <dvd>Breakfast at Tiffany's</dvd>
+      <price>19.99</price>
+    </collection>
+    <collection>
+      <dvd>Gone with the wind</dvd>
+      <price>15.20</price>
+    </collection>
+    <collection tv-series="true">
+      <dvd>The Simpsons</dvd>
+      <price>250.00</price>
+    </collection>
+  </genre>
+</catalog>
