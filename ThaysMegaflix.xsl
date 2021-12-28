@@ -51,13 +51,174 @@
  		                <p><i><xsl:value-of select="description" /></i></p>
 		            </td>
 		        </tr>
+                 </xsl:for-each>
                 </xsl:for-each>
-                </xsl:for-each>
+                
+               <div class="priceCalculation">
+
+                <tr>
+                    <td></td>
+                    <th>
+                        <h1>Bill</h1>
+                    </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>
+                        <h3>Comedy</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalComedy">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                  <tr>
+                    <td></td>
+                    <td>
+                        <h3>Drama</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalDrama">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>
+                        <h3>Romance</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalRomance">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                 <tr>
+                    <td></td>
+                    <td>
+                        <h3>Horror</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalHorror">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>
+                        <h3>Action</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalAction">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>
+                        <h3>Sci-fi</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalSciFi">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                 <tr>
+                    <td></td>
+                    <td>
+                        <h3>Classic</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalClassic">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>
+                        <h3>TV Series Cost</h3>
+                    </td>
+
+                    <td>
+                        <h2>
+                            <div id="totalSeries">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                 <tr>
+                    <td></td>
+                    <td>
+                        <h3>Movie Costs</h3>
+                    </td>
+                    <td>
+                        <h2>
+                            <div id="totalMovies">€0</div>
+                        </h2>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <h1 class="total"><b>Total:</b></h1>
+                    </td>
+                    <td>
+                        <h2>
+                            <div class="total" id="totalPrice">€0</div>
+                        </h2>
+                    </td>
+
+                    <td></td>
+                </tr>
+                
+                
+                     </div>
+              
                     </tbody>
     </table>
         </div>
         </div>
+        
 </body>
 </html>
 </xsl:template>
 </xsl:stylesheet>
+
+
