@@ -6,7 +6,7 @@
 <body>
 
         <div>
-            <h1>Megaflix</h1>
+            <h1> Thay's Megaflix</h1>
 
 <div>
 
@@ -48,12 +48,12 @@
 		            </td>
 		        </tr>
                 </xsl:for-each>
-            </xsl:for-each>
-        </div>
-        </div>
-        </tbody>
+                </xsl:for-each>
+                    </tbody>
     </table>
-</xsl:template>
-</xsl:stylesheet>
+        </div>
+        </div>
 </body>
 </html>
+</xsl:template>
+</xsl:stylesheet>
