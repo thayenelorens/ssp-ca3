@@ -15,7 +15,9 @@
             <tr>
                 <th><h1>Item</h1></th>
                 <th><h1>Quantity</h1></th>
+                <th></th>
                 <th><h1>Price</h1></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -37,8 +39,10 @@
                    <td>
                             <input name="item0" type="number" min="0"/>
                         </td>
+                         <td></td>
                         <td>
                            <h1><b><xsl:value-of select="price" /></b></h1>
+                            <td></td>
                         </td>
                     </tr>
 
