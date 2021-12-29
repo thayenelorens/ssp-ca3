@@ -48,7 +48,7 @@
 
 		            <tr>
 		                <td>
- 		                <p><i><xsl:value-of select="description" /></i></p>
+ 		                <p><xsl:value-of select="description" /></p>
 		            </td>
 		        </tr>
                  </xsl:for-each>
