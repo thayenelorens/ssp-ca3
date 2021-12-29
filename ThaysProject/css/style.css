@@ -1,0 +1,10 @@
+/*CSS */
+
+/*Change the background-image of my body section. The image is stored in the img folder.
+Selected a bit of margin to the body of this document.
+Changed the font-family.*/    
+body {
+    background-image: url(../img/body.jpg);
+    margin:20px;
+    font-family: 'Bahiana';
+}
