@@ -45,13 +45,15 @@ th, tr, td {
    
   }
 
-/*Changing the background-color of all heading elements.
+/*Changing the background-color of all heading elements and elements belonging to the .genres class.
     Changing text color of the text within this element.
     Adding some padding to this element.*/
-th {
-      background-color: black;
-      color: white;
-      padding: 30px;  
+
+.genres, th {
+
+    background-color: black;
+    color: white;
+    padding: 30px; 
 }
 
 /*The :nth-child(even) selects all the even rows of this table.
@@ -59,3 +61,13 @@ th {
 tr:nth-child(even) {
       background-color: #f2f2f2;
   }
+
+/*Setting a background-color for these div elements and increasing the font-size.*/
+#totalComedy, #totalDrama, #totalRomance, #totalHorror, #totalAction, #totalSciFi, #totalClassic, #totalSeries, #totalMovies {
+    background-color: rgb(22, 197, 22);
+    font-size: 35px;
+}
+
+#totalPrice {
+  background-color: rgb(228, 206, 15);
+}
