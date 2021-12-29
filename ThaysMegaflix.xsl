@@ -23,7 +23,7 @@
         <tbody>
             <xsl:for-each select="//genre">
                 <tr>
-                    <td colspan="3">
+                    <td colspan="5">
                         <h1><b><xsl:value-of select="@type" /></b></h1>
                     </td>
                 </tr>
