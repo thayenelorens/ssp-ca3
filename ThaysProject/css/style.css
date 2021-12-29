@@ -4,7 +4,58 @@
 Selected a bit of margin to the body of this document.
 Changed the font-family.*/    
 body {
-    background-image: url(../img/body.jpg);
+    background-image: url(../images/matrix.png);
     margin:20px;
     font-family: 'Bahiana';
 }
+
+/*Setting a background-color for the div container*/
+.container {
+    background-color: black;
+}
+
+/*Establishing a background-color for this div as well as text color, size and border properties.*/
+.table_of_contents {
+
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      font-size: 32px;
+  }
+/*Increasing the font-size of all <h1> within the table element.*/
+#table h1 {
+
+    font-size: 80px;
+}
+  
+table h3, table h2{
+    font-size: 35px;
+}
+
+
+.total {
+
+    font-size: 65px;
+}
+
+/*Adding some padding to the heading, row and column elements of a table.*/
+th, tr, td {
+
+      padding: 10px 25px;
+   
+  }
+
+/*Changing the background-color of all heading elements.
+    Changing text color of the text within this element.
+    Adding some padding to this element.*/
+th {
+      background-color: black;
+      color: white;
+      padding: 30px;  
+}
+
+/*The :nth-child(even) selects all the even rows of this table.
+    Setting that all the even rows will have a specific background-color, which is different from the odd rows within the same table.*/
+tr:nth-child(even) {
+      background-color: #f2f2f2;
+  }
