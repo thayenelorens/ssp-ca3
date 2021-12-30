@@ -14,6 +14,30 @@ body {
     background-color: black;
 }
 
+/*Setting border and padding properties for the div menu.
+  Setting text color and background-color.*/
+  #catalog {
+    border: 5px solid black;
+    color: white;
+    padding: 100px 20px;
+    background-color: black;
+}
+
+/*Increasing the font-size for this element and aligning it to the center of the div in which it is located.
+Also adding a background-image.*/
+#heading {
+    font-family: 'Bahiana';
+    font-size: 130px;
+    text-align: center;
+    padding: 70px;
+    background-image: url(../images/film.jpg);
+}
+
+/*Increasing the font-size of the text within this class.*/
+.badge {
+    font-size: 37px;
+}
+
 /*Establishing a background-color for this div as well as text color, size and border properties.*/
 .table_of_contents {
 
