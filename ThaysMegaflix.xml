@@ -117,7 +117,7 @@
   </genre>
   <genre type="Sci-fi">
     <collection>
-     <picture>ThaysProject/images/matrix.png</picture>
+     <picture>ThaysProject/images/matrix.jpg</picture>
       <dvd> The Matrix</dvd>
          <trailer>https://www.youtube.com/embed/vKQi3bBA1y8</trailer>
       <price>19.99</price>
