@@ -3,55 +3,36 @@
 <xsl:template match="/">
 
 <html>
-<head>
-      <!-- Required meta tags for the browser -->
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="Thayene Lorens" content="Creating an interactive Webpage">
-  
-      <!-- Bootstrap CSS version 4.5.2 -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  
-      <!-- My CSS file-->
-      <link rel="stylesheet" type="text/css" href="ThaysProject/css/style.css">
-  
-      <!--Google fonts link - Bahiana-->
-      <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
-  
-  
-      <!--My home page title-->
-      <title>Film Verse</title>
-</link>        
-</link>
-</link>
-</meta>	
-</meta>
-</meta>
-</meta>
-</head>
 <body>
 
-        <div>
-            <h1>Film Verse</h1>
-
-<div>
+ <div class= "container">
+        <div id="catalog">
+         <h1 id="heading">Thay's Megaflix</h1>
+         </div>
 
     <table>
         <thead>
-            <tr>
-                <th><h1>Item</h1></th>
-                <th><h1>Quantity</h1></th>
-                <th></th>
-                <th><h1>Price</h1></th>
-                <th></th>
-            </tr>
-        </thead>
+                  <tr>
+                     <th>
+                        <h1><span class="badge badge-primary">PHOTO</span></h1>
+                     </th>
+                     <th>
+                        <h1><span class="badge badge-primary">ITEM</span></h1>
+                     </th>
+                     <th>
+                        <h1><span class="badge badge-primary">TRAILER</span></h1>
+                     </th>
+                     <th></th>
+                     <th>
+                        <h1><span class="badge badge-primary">PRICE</span></h1>
+                     </th>
+                     <th></th>
+                  </tr>
+               </thead>
         <tbody>
             <xsl:for-each select="//genre">
                 <tr>
-                    <td colspan="5">
+                    <td colspan="6">
                         <h1><b><xsl:value-of select="@type" /></b></h1>
                     </td>
                 </tr>
@@ -61,41 +42,66 @@
                             <xsl:value-of select="boolean(@tv-series)" />
                         </xsl:attribute>
                        
-                        <td>						
+                         <td>                        
                     <xsl:element name="img">				
                 <xsl:attribute name="src">				
-                <xsl:value-of select="cover"/>				
-              </xsl:attribute>						
+                <xsl:value-of select="picture"/>		  		
+              </xsl:attribute>							
               <xsl:attribute name="align">left</xsl:attribute>		
                 </xsl:element>						
                </td>		
                         <td>
                          <h1><b><xsl:value-of select="dvd" /></b></h1>
                         </td>
-                   <td>
-                            <input name="item0" type="number" min="0"/>
-                        </td>
-                         <td></td>
+                        
                         <td>
-                           <h1><b><xsl:value-of select="price" /></b></h1>
+                  <div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+    <a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">Launch Demo Modal</a>
+    
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">YouTube Video</h5>
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="embed-responsive embed-responsive-16by9">
+
+                    <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   .
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+                         </td>
+                        <td>
+                           <h1><span class="badge badge-warning"><b><xsl:value-of select="price" /></b></span></h1>
                             <td></td>
                         </td>
                     </tr>
 
-		            <tr>
-		                <td>
+    	            <tr>
+		                <td colspan="6">
  		                <p><xsl:value-of select="description" /></p>
 		            </td>
 		        </tr>
                  </xsl:for-each>
                 </xsl:for-each>
+                
+              
               
                     </tbody>
     </table>
-        </div>
-        </div>
         
+        </div>
+
 </body>
 </html>
 </xsl:template>
 </xsl:stylesheet>
+
+
