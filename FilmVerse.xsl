@@ -9,7 +9,7 @@
         <div id="catalog">
          <h1 id="heading">Thay's Megaflix</h1>
          </div>
-
+ <div class= "table_of_contents" >
     <table>
         <thead>
                   <tr>
@@ -32,7 +32,7 @@
         <tbody>
             <xsl:for-each select="//genre">
                 <tr>
-                    <td colspan="6">
+                    <td class="genres" colspan="6">
                         <h1><b><xsl:value-of select="@type" /></b></h1>
                     </td>
                 </tr>
@@ -46,7 +46,8 @@
                     <xsl:element name="img">				
                 <xsl:attribute name="src">				
                 <xsl:value-of select="picture"/>		  		
-              </xsl:attribute>							
+              </xsl:attribute>	
+              <xsl:attribute name="width">200</xsl:attribute>						
               <xsl:attribute name="align">left</xsl:attribute>		
                 </xsl:element>						
                </td>		
@@ -78,9 +79,10 @@
     </div>
 </div>     
                          </td>
+                          <td></td>
                         <td>
                            <h1><span class="badge badge-warning"><b><xsl:value-of select="price" /></b></span></h1>
-                            <td></td>
+                            <td></td>   
                         </td>
                     </tr>
 
@@ -96,6 +98,7 @@
               
                     </tbody>
     </table>
+    </div>
         
         </div>
 
