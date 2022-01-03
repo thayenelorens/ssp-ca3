@@ -71,7 +71,7 @@
                 <div class="modal-body">
                   <div class="embed-responsive embed-responsive-16by9">
 
-                    <iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   .
+                    <iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   
                   </div>
                 </div>
             </div>
