@@ -105,8 +105,11 @@
   <div class="row">
     <div class="col"></div>
     <div class="col">
+    <button class="btn btn-primary" id="contact">Contact</button>
+    <div id="panel">
    
     <h2>CONTACT</h2>
+    </div>
     </div>
   </div>     
         </div>
