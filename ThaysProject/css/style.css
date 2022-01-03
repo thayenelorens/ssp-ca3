@@ -121,9 +121,11 @@ tr:nth-child(even) {
 
   #contact {
     font-size: 30px;
-  }
+}
   
-   
+.bs-example a {
+    font-size: 30px;
+}
 
 
 
