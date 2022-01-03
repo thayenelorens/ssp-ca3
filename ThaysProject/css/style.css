@@ -96,16 +96,12 @@ tr:nth-child(even) {
   background-color: rgb(228, 206, 15);
 }
 
-#panel {
- 
-    margin:10px 0 0 0;
-    background-image: url(../images/farewell.gif);
-    background-size:auto;
-    color: #fff;
-}
+
 #panel1 {
     padding: 50px;
-    font-size: 35px;;
+    font-size: 35px;
+    color: white;
+    display:none;
 }
 
 /*Changing some font properties of all h2 elements within this class.*/
@@ -114,9 +110,15 @@ tr:nth-child(even) {
   text-decoration:overline underline #FF3028;
 }
 
-.col-sm-4 p {
-  font-size: 30px;
+.jumbotron {
+
+    background-color: black;
 }
+
+.jumbotron a {
+    font-size: 30px;
+  }
+
 
 
 /*END*/
