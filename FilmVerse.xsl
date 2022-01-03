@@ -98,8 +98,19 @@
               
                     </tbody>
     </table>
+    </div>  
+    <!-- Using Bootstrap 4 jumbotron-->
+      <div class="jumbotron">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col bg-success"></div>
+    <div class="col bg-warning">
+   
+    <h2>CONTACT</h2>
     </div>
-        
+  </div>     
+        </div>
+        </div>
         </div>
 
 </body>
