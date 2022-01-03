@@ -5,25 +5,34 @@
 <html>
 <body>
 
-        <div>
-            <h1> Thay's Megaflix</h1>
-
-<div>
-
+ <div class= "container">
+        <div id="catalog">
+         <h1 id="heading">Thay's Megaflix</h1>
+         </div>
+ <div class= "table_of_contents" >
     <table>
         <thead>
-            <tr>
-                <th><h1>Item</h1></th>
-                <th><h1>Quantity</h1></th>
-                <th></th>
-                <th><h1>Price</h1></th>
-                <th></th>
-            </tr>
-        </thead>
+                  <tr>
+                     <th>
+                        <h1><span class="badge badge-primary">PHOTO</span></h1>
+                     </th>
+                     <th>
+                        <h1><span class="badge badge-primary">ITEM</span></h1>
+                     </th>
+                     <th>
+                        <h1><span class="badge badge-primary">TRAILER</span></h1>
+                     </th>
+                     <th></th>
+                     <th>
+                        <h1><span class="badge badge-primary">PRICE</span></h1>
+                     </th>
+                     <th></th>
+                  </tr>
+               </thead>
         <tbody>
             <xsl:for-each select="//genre">
                 <tr>
-                    <td colspan="5">
+                    <td class="genres" colspan="6">
                         <h1><b><xsl:value-of select="@type" /></b></h1>
                     </td>
                 </tr>
@@ -33,192 +42,85 @@
                             <xsl:value-of select="boolean(@tv-series)" />
                         </xsl:attribute>
                        
+                         <td>                        
+                    <xsl:element name="img">				
+                <xsl:attribute name="src">				
+                <xsl:value-of select="picture"/>		  		
+              </xsl:attribute>	
+              <xsl:attribute name="width">200</xsl:attribute>						
+              <xsl:attribute name="align">left</xsl:attribute>		
+                </xsl:element>						
+               </td>		
                         <td>
                          <h1><b><xsl:value-of select="dvd" /></b></h1>
                         </td>
-                   <td>
-                            <input name="item0" type="number" min="0"/>
-                        </td>
-                         <td></td>
+                        
                         <td>
-                           <h1><b><xsl:value-of select="price" /></b></h1>
-                            <td></td>
+                  <div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+    <a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a>
+    
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">YouTube Video</h5>
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="embed-responsive embed-responsive-16by9">
+
+                    <iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+                         </td>
+                          <td></td>
+                        <td>
+                           <h1><span class="badge badge-warning"><b><xsl:value-of select="price" /></b></span></h1>
+                            <td></td>   
                         </td>
                     </tr>
 
-		            <tr>
-		                <td>
+    	            <tr>
+		                <td colspan="6">
  		                <p><xsl:value-of select="description" /></p>
 		            </td>
 		        </tr>
                  </xsl:for-each>
                 </xsl:for-each>
                 
-               <div class="priceCalculation">
-
-                <tr>
-                    <td></td>
-                    <th>
-                        <h1>Bill</h1>
-                    </th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td>
-                        <h3>Comedy</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalComedy">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                  <tr>
-                    <td></td>
-                    <td>
-                        <h3>Drama</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalDrama">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td>
-                        <h3>Romance</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalRomance">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                 <tr>
-                    <td></td>
-                    <td>
-                        <h3>Horror</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalHorror">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td>
-                        <h3>Action</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalAction">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td>
-                        <h3>Sci-fi</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalSciFi">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                 <tr>
-                    <td></td>
-                    <td>
-                        <h3>Classic</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalClassic">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td>
-                        <h3>TV Series Cost</h3>
-                    </td>
-
-                    <td>
-                        <h2>
-                            <div id="totalSeries">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                
-                 <tr>
-                    <td></td>
-                    <td>
-                        <h3>Movie Costs</h3>
-                    </td>
-                    <td>
-                        <h2>
-                            <div id="totalMovies">€0</div>
-                        </h2>
-                    </td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <h1 class="total"><b>Total:</b></h1>
-                    </td>
-                    <td>
-                        <h2>
-                            <div class="total" id="totalPrice">€0</div>
-                        </h2>
-                    </td>
-
-                    <td></td>
-                </tr>
-                
-                
-                     </div>
+              
               
                     </tbody>
     </table>
+    </div>  
+    <!-- Using Bootstrap 4 jumbotron-->
+      <div class="jumbotron">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+    <button class="btn btn-primary" id="contact">Contact</button>
+    <div id="panel">
+   
+    <h2>CONTACT</h2>
+    </div>
+    </div>
+  </div>     
         </div>
         </div>
-        
+        </div>
+
 </body>
 </html>
 </xsl:template>
 </xsl:stylesheet>
+
+
 
 
