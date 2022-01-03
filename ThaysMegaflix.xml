@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--This file is about DVDs and its info-->
+<!--Beginning: The root element of the xml file-->
 <catalog>
+<!--Creating a 'type' attribute for each genre-->
   <genre type="Comedy">
     <collection>
     <picture>ThaysProject/images/free guy.jpg</picture>
       <dvd>Free Guy</dvd>
+      <!--This tag carries the youtube link of each movie.
+      Extracted from:https://stackoverflow.com/questions/5235576/problems-with-embedding-youtube-with-xslt-transforms-->
       <trailer>https://www.youtube.com/embed/X2m-08cOAbc</trailer>
       <price>9.99</price>
       <description>It is the story of a bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story.</description>
@@ -161,4 +166,5 @@
       <description>The series is a satirical depiction of American life, epitomized by the Simpson family, which consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.</description>
     </collection>
   </genre>
+  <!--End: Closing the root element of the xml file-->
 </catalog>
