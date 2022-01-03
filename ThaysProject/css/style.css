@@ -97,7 +97,7 @@ tr:nth-child(even) {
 }
 
 
-#panel1 {
+#panel {
     padding: 50px;
     font-size: 35px;
     color: white;
@@ -116,6 +116,10 @@ tr:nth-child(even) {
 }
 
 .jumbotron a {
+    font-size: 30px;
+  }
+
+  #contact {
     font-size: 30px;
   }
 
