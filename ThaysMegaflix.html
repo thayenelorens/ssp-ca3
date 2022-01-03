@@ -1,750 +1,965 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <head>
-         <!-- Required meta tags for the browser -->
-         <meta charset="UTF-8">
-         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <meta name="Thayene Lorens" content="Creating an interactive Webpage">
-     
-         <!-- Bootstrap CSS version 4.5.2 -->
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-     
-         <!-- My CSS file-->
-         <link rel="stylesheet" type=text/css href="ThaysProject/css/style.css">
-     
-         <!--Google fonts link - Bahiana-->
-         <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
-     
-     
-         <!-- My JavaScript file - I opted to put this link in the head section by using the attribute "defer"-->
-         <script defer src="ThaysProject/js/script.js"></script>
 
-         <!-- My JQuery file - I opted to put this link in the head section by using the attribute "defer"-->
-         <script defer src="ThaysProject/js/myQuery.js"></script>
+<head>
+   <!-- Required meta tags for the browser -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="Thayene Lorens" content="Creating an interactive Webpage">
 
-         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-     
-         <!--My home page title-->
-         <title>Thay's Megaflix</title>
-   </head>
-   <body>
-      <div class="container">
-         <div id="catalog">
-            <h1 id="heading">Thay's Megaflix</h1>
-         </div>
-         <div class="table_of_contents">
-            <table>
-               <thead>
-                  <tr>
-                     <th>
-                        <h1><span class="badge badge-primary">PHOTO</span></h1>
-                     </th>
-                     <th>
-                        <h1><span class="badge badge-primary">ITEM</span></h1>
-                     </th>
-                     <th>
-                        <h1><span class="badge badge-primary">TRAILER</span></h1>
-                     </th>
-                     <th></th>
-                     <th>
-                        <h1><span class="badge badge-primary">PRICE</span></h1>
-                     </th>
-                     <th></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Comedy</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/free guy.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Free Guy</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal1" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal1" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/X2m-08cOAbc" allowfullscreen></iframe></div>
+   <!-- Bootstrap CSS version 4.5.2 -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+   <!-- My CSS file-->
+   <link rel="stylesheet" type=text/css href="ThaysProject/css/style.css">
+
+   <!--Google fonts link - Bahiana-->
+   <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
+
+   <!-- My JavaScript file - I opted to put this link in the head section by using the attribute "defer"-->
+   <script defer src="ThaysProject/js/script.js"></script>
+
+   <!-- My JQuery file - I opted to put this link in the head section by using the attribute "defer"-->
+   <script defer src="ThaysProject/js/myQuery.js"></script>
+
+   <!--jQuery version 3.5.1 library-->
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+   <!--Bootstrao JS version 4.5.0-->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+   <!--My home page title-->
+   <title>Thay's Megaflix</title>
+</head>
+
+<body>
+
+   <!--Embodying the table inside a div container.
+         Using Bootstrap 4 container-->
+   <!--This div embodies all my other divs-->
+   <div class="container">
+      <!--Heading-->
+      <div id="catalog">
+         <h1 id="heading">Thay's Megaflix</h1>
+      </div>
+      <div class="table_of_contents">
+         <!--Beginning of the table-->
+         <table>
+            <!--Table headings-->
+            <thead>
+               <tr>
+                  <th>
+                     <h1><span class="badge badge-primary">PHOTO</span></h1>
+                  </th>
+                  <th>
+                     <h1><span class="badge badge-primary">ITEM</span></h1>
+                  </th>
+                  <th>
+                     <h1><span class="badge badge-primary">TRAILER</span></h1>
+                  </th>
+                  <th></th>
+                  <th>
+                     <h1><span class="badge badge-primary">PRICE</span></h1>
+                  </th>
+                  <th></th>
+               </tr>
+            </thead>
+            <!--Beginning of table body-->
+            <tbody>
+
+               <!--The transformation worked as all the movies and their info were displayed in the table below-->
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Comedy</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/free guy.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Free Guy</b></h1>
+                  </td>
+
+                  <!--I changed all the href placeholders and ids for the buttons.
+                     I gave them a number in ascending order, because otherwise all the trailer buttons would display the "Free Guy"
+                  trailer, instead of their respective ones -->
+
+                  <!--I also added the &times; to add the X option to close the window and I added the 
+                  allowfullscreen attribute to enable this option. I could not do it in the xsl file.-->
+
+                  <!--Boostrap modal code was extracted from: https://www.tutorialrepublic.com/codelab.php?topic=faq&file=play-youtube-video-in-bootstrap-modal-->
+                  <td>
+                     <div class="bs-example"><a href="#myModal1" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal1" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/X2m-08cOAbc" allowfullscreen></iframe>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>It is the story of a bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/scary movie 2.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Scary Movie 2</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal2" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal2" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/zCFZUZxBVuI" allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>7.00</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Four teens are tricked by Professor Oldman into visiting a haunted house for a school project.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/friends.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Friends</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal3" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal3" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/hDNNmeeJs1Q" allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>75.00</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Friends is a 90's Comedy TV show, based in Manhattan, about 6 friends who go through just about every life experience imaginable together; love, marriage, divorce, children, heartbreaks, fights, new jobs and job losses and all sorts of drama.</p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Drama</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/sweet november.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Sweet November</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal4" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal4" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/A7hkvdyG8x4"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>A workaholic executive, and an unconventional woman agree to a personal relationship for a short period. In this short period she changes his life. The story centers around a man and a woman, whose fates are intertwined and will change forever.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/forrest gump.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Forrest Gump</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal5" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal5" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/bLvqoHBptjg"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>11.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/gilmore girls.jpeg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Gilmore Girls</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal6" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal6" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/1F6_VK-Adt0"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>89.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Gilmore Girls is an American TV series, starring Lorelai and Rory as a mother and a daughter who are more friends than mother and daughter and who both dream of pursuing satisfaction in their love relationships and their careers</p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Romance</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/somewhere in time.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Somewhere in Time</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal7" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal7" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/DhcUnpaVyzo"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>12.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>A Chicago playwright uses self-hypnosis to travel back in time and meet the actress whose vintage portrait hangs in a grand hotel.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/titanic.png" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Titanic</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal8" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal8" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/kVrqfYjkTdQ"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>12.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p> It is a 1997 American epic romantic disaster movie. The movie is about the 1912 sinking of the RMS Titanic.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/outlander.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Outlander</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal9" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal9" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/PFFKjptRr7Y"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>125.00</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Outlander follows the story of Claire Randall, a married combat nurse from 1945 who is mysteriously swept back in time to 1743, where she is immediately thrown into an unknown world where her life is threatened.</p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Horror</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/the exorcist.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>The Exorcist</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal10" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal10" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/YDGw1MTEe9k"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>7.50</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>It follows the demonic possession of a 12 year-old girl and her mother's attempt to rescue her through an exorcism conducted by two Catholic priests.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/the sixth sense.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>The Sixth Sense</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal11" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal11" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/3-ZP95NF_Wk"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>The film tells the story of Kole Sear, a troubled, isolated boy who is able to see and talk to the dead, and an equally troubled child psychologist named Malcolm Crowe who tries to help him.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/AHS.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>American Horror Stories</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal12" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal12" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/-tC3wIAIBx8"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>100.00</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Each season is conceived as a self-contained miniseries, following a different set of characters and settings, and a storyline with its own "beginning, middle, and end." Some plot elements of each season are loosely inspired by true events.</p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Action</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/gladiator.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Gladiator</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal13" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal13" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/owK1qxDselE"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/the last duel.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>The Last Duel</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal14" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal14" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/mgygUwPJvYk"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>16.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Based on the true story of France's last trial by combat in the Middle Ages. Knight Jean de Carrouges challenges his former friend Jacques Le Gris to a duel after Jean's wife Marguerite accuses Le Gris of rape. Told in multiple "Rashomon-style" points of view.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/buffy.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Buffy The Vampire Slayer</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal15" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal15" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/-1v_q6TWAL4"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>79.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>A young woman, destined to slay vampires, demons and other infernal creatures, deals with her life fighting evil, with the help of her friends. </p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Sci-fi</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/matrix.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b> The Matrix</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal16" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal16" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>19.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>The film describes a future in which reality perceived by humans is actually the Matrix, a simulated reality created by sentient Machines in order to pacify and subdue the human population while their bodies' heat and electrical activity are used as an energy source.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/the butterfly effect.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>The Butterfly Effect</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal17" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal17" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/B8_dgqfPXFg"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>16.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>The film draws heavily on flashbacks of the characters' lives at ages 7 and 13 and presents several alternative present-day outcomes as Evan attempts to change the past, before settling on a final outcome.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/the mandalorian.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>The Mandalorian</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal18" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal18" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/aOC8E8z_ifw"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>25.00</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>After the stories of Jango and Boba Fett, another warrior emerges in the Star Wars universe. “The Mandalorian” is set after the fall of the Empire and before the emergence of the First Order. We follow the travails of a lone gunfighter in the outer reaches of the galaxy, far from the authority of the New Republic.</p>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td class="genres" colspan="6">
-                        <h1><b>Classic</b></h1>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/breakfast.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Breakfast at Tiffany's</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal19" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal19" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/OPQkbvo99Ug"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>19.99</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>It is the story of a young woman in World War II-era New York who hobnobs with famous people, gets into a lot of trouble, and breaks many hearts along the way, all while struggling to find her place in the world.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="false">
-                     <td><img src="ThaysProject/images/gone with the wind.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>Gone with the wind</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal20" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal20" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/0X94oZgJis4"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>15.20</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>Set in the American South against the backdrop of the American Civil War and the Reconstruction era, the film tells the story of Scarlett O'Hara, the strong-willed daughter of a Georgia plantation owner.</p>
-                     </td>
-                  </tr>
-                  <tr tv-series="true">
-                     <td><img src="ThaysProject/images/simpsons.jpg" width="200" align="left"></td>
-                     <td>
-                        <h1><b>The Simpsons</b></h1>
-                     </td>
-                     <td>
-                        <div class="bs-example"><a href="#myModal21" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a><div id="myModal21" class="modal fade">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title">YouTube Video</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                                    <div class="modal-body">
-                                       <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg"allowfullscreen></iframe></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                     <td></td>
-                     <td>
-                        <h1><span class="badge badge-warning"><b>250.00</b></span></h1>
-                        <td></td>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="6">
-                        <p>The series is a satirical depiction of American life, epitomized by the Simpson family, which consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.</p>
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div class="jumbotron">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col">
-                     <img src="ThaysProject/images/truman.gif">
-                  </div>
-                  <div class="col">
-                     <button class="btn btn-primary" id="contact">Contact</button>
-                     <div id="panel">
-                        <br>
-                        <p>Student name: Thayene Lorens</p>
-                        <p>Student number: 2020293</p>
-                        <!--target blank, opens link in a different page-->
-                        <p>Email: <a href="mailto:thayenelorens@gmail.com" title="Contact me" target=_blank
-                            class="btn btn-warning">thayenelorens@gmail.com</a></p>
-                        <p>Professor: Mikhail Timofeev</p>
-                        <!--target blank, opens link in a different page-->
-                        <p>Click here: <a href="https://github.com/thayenelorens/ssp-ca3.git" target="_blank"
-                            title="Github" target=_blank class="btn btn-warning">Github link</a></p>
                      </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>It is the story of a bank teller who discovers he is actually a background player in an
+                        open-world video game, decides to become the hero of his own story.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/scary movie 2.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Scary Movie 2</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal2" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal2" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/zCFZUZxBVuI" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>7.00</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Four teens are tricked by Professor Oldman into visiting a haunted house for a school project.
+                     </p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/friends.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Friends</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal3" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal3" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/hDNNmeeJs1Q" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>75.00</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Friends is a 90's Comedy TV show, based in Manhattan, about 6 friends who go through just about
+                        every life experience imaginable together; love, marriage, divorce, children, heartbreaks,
+                        fights, new jobs and job losses and all sorts of drama.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Drama</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/sweet november.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Sweet November</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal4" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal4" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/A7hkvdyG8x4" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>A workaholic executive, and an unconventional woman agree to a personal relationship for a short
+                        period. In this short period she changes his life. The story centers around a man and a woman,
+                        whose fates are intertwined and will change forever.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/forrest gump.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Forrest Gump</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal5" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal5" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/bLvqoHBptjg" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>11.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through
+                        childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and
+                        leaves him to choose his destiny.</p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/gilmore girls.jpeg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Gilmore Girls</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal6" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal6" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/1F6_VK-Adt0" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>89.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Gilmore Girls is an American TV series, starring Lorelai and Rory as a mother and a daughter who
+                        are more friends than mother and daughter and who both dream of pursuing satisfaction in their
+                        love relationships and their careers</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Romance</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/somewhere in time.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Somewhere in Time</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal7" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal7" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/DhcUnpaVyzo" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>12.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>A Chicago playwright uses self-hypnosis to travel back in time and meet the actress whose
+                        vintage portrait hangs in a grand hotel.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/titanic.png" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Titanic</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal8" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal8" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/kVrqfYjkTdQ" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>12.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p> It is a 1997 American epic romantic disaster movie. The movie is about the 1912 sinking of the
+                        RMS Titanic.</p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/outlander.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Outlander</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal9" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal9" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/PFFKjptRr7Y" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>125.00</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Outlander follows the story of Claire Randall, a married combat nurse from 1945 who is
+                        mysteriously swept back in time to 1743, where she is immediately thrown into an unknown world
+                        where her life is threatened.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Horror</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/the exorcist.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>The Exorcist</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal10" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal10" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/YDGw1MTEe9k" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>7.50</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>It follows the demonic possession of a 12 year-old girl and her mother's attempt to rescue her
+                        through an exorcism conducted by two Catholic priests.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/the sixth sense.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>The Sixth Sense</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal11" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal11" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/3-ZP95NF_Wk" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>The film tells the story of Kole Sear, a troubled, isolated boy who is able to see and talk to
+                        the dead, and an equally troubled child psychologist named Malcolm Crowe who tries to help him.
+                     </p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/AHS.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>American Horror Stories</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal12" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal12" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/-tC3wIAIBx8" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>100.00</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Each season is conceived as a self-contained miniseries, following a different set of characters
+                        and settings, and a storyline with its own "beginning, middle, and end." Some plot elements of
+                        each season are loosely inspired by true events.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Action</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/gladiator.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Gladiator</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal13" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal13" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/owK1qxDselE" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his
+                        family and sent him into slavery.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/the last duel.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>The Last Duel</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal14" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal14" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/mgygUwPJvYk" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>16.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Based on the true story of France's last trial by combat in the Middle Ages. Knight Jean de
+                        Carrouges challenges his former friend Jacques Le Gris to a duel after Jean's wife Marguerite
+                        accuses Le Gris of rape. Told in multiple "Rashomon-style" points of view.</p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/buffy.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Buffy The Vampire Slayer</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal15" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal15" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/-1v_q6TWAL4" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>79.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>A young woman, destined to slay vampires, demons and other infernal creatures, deals with her
+                        life fighting evil, with the help of her friends. </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Sci-fi</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/matrix.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b> The Matrix</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal16" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal16" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/vKQi3bBA1y8" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>19.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>The film describes a future in which reality perceived by humans is actually the Matrix, a
+                        simulated reality created by sentient Machines in order to pacify and subdue the human
+                        population while their bodies' heat and electrical activity are used as an energy source.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/the butterfly effect.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>The Butterfly Effect</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal17" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal17" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/B8_dgqfPXFg" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>16.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>The film draws heavily on flashbacks of the characters' lives at ages 7 and 13 and presents
+                        several alternative present-day outcomes as Evan attempts to change the past, before settling on
+                        a final outcome.</p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/the mandalorian.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>The Mandalorian</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal18" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal18" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/aOC8E8z_ifw" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>25.00</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>After the stories of Jango and Boba Fett, another warrior emerges in the Star Wars universe.
+                        “The Mandalorian” is set after the fall of the Empire and before the emergence of the First
+                        Order. We follow the travails of a lone gunfighter in the outer reaches of the galaxy, far from
+                        the authority of the New Republic.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="genres" colspan="6">
+                     <h1><b>Classic</b></h1>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/breakfast.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Breakfast at Tiffany's</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal19" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal19" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/OPQkbvo99Ug" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>19.99</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>It is the story of a young woman in World War II-era New York who hobnobs with famous people,
+                        gets into a lot of trouble, and breaks many hearts along the way, all while struggling to find
+                        her place in the world.</p>
+                  </td>
+               </tr>
+               <tr tv-series="false">
+                  <td><img src="ThaysProject/images/gone with the wind.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>Gone with the wind</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal20" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal20" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/0X94oZgJis4" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>15.20</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>Set in the American South against the backdrop of the American Civil War and the Reconstruction
+                        era, the film tells the story of Scarlett O'Hara, the strong-willed daughter of a Georgia
+                        plantation owner.</p>
+                  </td>
+               </tr>
+               <tr tv-series="true">
+                  <td><img src="ThaysProject/images/simpsons.jpg" width="200" align="left"></td>
+                  <td>
+                     <h1><b>The Simpsons</b></h1>
+                  </td>
+                  <td>
+                     <div class="bs-example"><a href="#myModal21" class="btn btn-primary btn-lg"
+                           data-toggle="modal">Watch Trailer</a>
+                        <div id="myModal21" class="modal fade">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">YouTube Video</h5><button type="button" class="close"
+                                       data-dismiss="modal">&times;</button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe id="movieTrailer"
+                                          class="embed-responsive-item" width="560" height="315"
+                                          src="https://www.youtube.com/embed/SR8WWFzrZAg" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </td>
+                  <td></td>
+                  <td>
+                     <h1><span class="badge badge-warning"><b>250.00</b></span></h1>
+                  <td></td>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="6">
+                     <p>The series is a satirical depiction of American life, epitomized by the Simpson family, which
+                        consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in the fictional town of
+                        Springfield and parodies American culture and society, television, and the human condition.</p>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!--End of table-->
+      </div>
+      <!-- Using Bootstrap 4 jumbotron-->
+      <div class="jumbotron">
+         <!--Using Bootstrap to create a 2 column grid system (50% each)-->
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col">
+                  <!--This half of the grid will display the gif below-->
+                  <img src="ThaysProject/images/truman.gif">
+               </div>
+               <div class="col">
+                  <!--This button triggers a jQuery function that changes the behavior of the "panel" div below-->
+                  <button class="btn btn-primary" id="contact">Contact</button>
+                  <div id="panel">
+                     <br>
+                     <p>Student name: Thayene Lorens</p>
+                     <p>Student number: 2020293</p>
+                     <!--target blank, opens link in a different page-->
+                     <p>Email: <a href="mailto:thayenelorens@gmail.com" title="Contact me" target=_blank
+                           class="btn btn-warning">thayenelorens@gmail.com</a></p>
+                     <p>Professor: Mikhail Timofeev</p>
+                     <!--target blank, opens link in a different page-->
+                     <p>Click here: <a href="https://github.com/thayenelorens/ssp-ca3.git" target="_blank"
+                           title="Github" target=_blank class="btn btn-warning">Github link</a></p>
                   </div>
                </div>
             </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

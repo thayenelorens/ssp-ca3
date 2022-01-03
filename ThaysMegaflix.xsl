@@ -6,7 +6,9 @@
 <html>
 <body>
 
-<!--Embodying the table inside a div container--><!-- Using Bootstrap 4 container-->
+<!--Embodying the table inside a div container.
+    Using Bootstrap 4 container-->
+    
 <!--This div embodies all my other divs-->
  <div class= "container">
  <!--Heading-->
