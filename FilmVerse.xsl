@@ -58,7 +58,7 @@
                         <td>
                   <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->
-    <a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">Launch Demo Modal</a>
+    <a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a>
     
     <!-- Modal HTML -->
     <div id="myModal" class="modal fade">
@@ -71,7 +71,7 @@
                 <div class="modal-body">
                   <div class="embed-responsive embed-responsive-16by9">
 
-                    <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   .
+                    <iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   .
                   </div>
                 </div>
             </div>
@@ -103,8 +103,8 @@
       <div class="jumbotron">
   <div class="container-fluid">
   <div class="row">
-    <div class="col bg-success"></div>
-    <div class="col bg-warning">
+    <div class="col"></div>
+    <div class="col">
    
     <h2>CONTACT</h2>
     </div>
