@@ -12,7 +12,7 @@ const   http = require('http'), //This module provides the HTTP server functiona
 const   router = express(), 
         server = http.createServer(router);
 
-router.use(express.static(path.resolve(__dirname,'views'))); //We serve static content from "views" folder
+router.use(express.static(path.resolve(__dirname,'ThaysProject'))); //We serve static content from "ThaysProject" folder
 router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be encoded in a URL targeting our end point
 router.use(express.json()); //We include support for JSON
 
@@ -57,7 +57,7 @@ router.get('/get/html', function(req, res) {
     res.end(result.toString());
 
 });
-
+/*
 router.post('/post/json', function (req, res) {
 
     function appendJSON(obj) {
@@ -106,7 +106,7 @@ router.post('/post/delete', function (req, res) {
 
     res.redirect('back');
 
-});
+});*/
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
     const addr = server.address();
