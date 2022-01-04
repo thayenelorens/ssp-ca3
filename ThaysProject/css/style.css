@@ -14,7 +14,7 @@ body {
     background-color: black;
 }
 
-/*Setting border and padding properties for the div menu.
+/*Setting border and padding properties for the div catalog.
   Setting text color and background-color.*/
   #catalog {
     border: 5px solid black;
@@ -23,7 +23,7 @@ body {
     background-color: black;
 }
 
-/*Increasing the font-size for this element and aligning it to the center of the div in which it is located.
+/*Increasing the font-size of this element and aligning it to the center of the div in which it is located.
 Also adding a background-image.*/
 #heading {
     font-family: 'Bahiana';
@@ -41,38 +41,28 @@ Also adding a background-image.*/
 /*Establishing a background-color for this div as well as text color, size and border properties.*/
 .table_of_contents {
 
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-      font-size: 32px;
-  }
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 32px;
+}
+
 /*Increasing the font-size of all <h1> within the table element.*/
 #table h1 {
 
     font-size: 80px;
 }
-  
-table h3, table h2{
-    font-size: 35px;
-}
-
-
-.total {
-
-    font-size: 65px;
-}
-
+ 
 /*Adding some padding to the heading, row and column elements of a table.*/
 th, tr, td {
 
-      padding: 10px 25px;
+    padding: 10px 25px;
    
   }
 
 /*Changing the background-color of all heading elements and elements belonging to the .genres class.
-    Changing text color of the text within this element.
+    Also changing the color of the text.
     Adding some padding to this element.*/
-
 .genres, th {
 
     background-color: black;
@@ -83,20 +73,13 @@ th, tr, td {
 /*The :nth-child(even) selects all the even rows of this table.
     Setting that all the even rows will have a specific background-color, which is different from the odd rows within the same table.*/
 tr:nth-child(even) {
-      background-color: #f2f2f2;
-  }
 
-/*Setting a background-color for these div elements and increasing the font-size.*/
-#totalComedy, #totalDrama, #totalRomance, #totalHorror, #totalAction, #totalSciFi, #totalClassic, #totalSeries, #totalMovies {
-    background-color: rgb(22, 197, 22);
-    font-size: 35px;
+    background-color: #f2f2f2;
 }
 
-#totalPrice {
-  background-color: rgb(228, 206, 15);
-}
-
-
+/*Added some padding to this element.
+Set it to display none, because the content within this element should be hidden, since javaScript is being implemented to change this behaviour.
+Increasing the font-size and color of text within this div.*/
 #panel {
     padding: 50px;
     font-size: 35px;
@@ -110,23 +93,26 @@ tr:nth-child(even) {
   text-decoration:overline underline #FF3028;
 }
 
+/*Changing the background color of the jumbotron class.*/
 .jumbotron {
 
     background-color: black;
 }
 
+/*Changing the font size of all a (link) elements.*/
 .jumbotron a {
     font-size: 30px;
-  }
+}
 
+/*Changing the font size this element*/
   #contact {
     font-size: 30px;
 }
-  
+ 
+
+/*Changing the font size of all a (link) elements within the bs class.*/
 .bs-example a {
     font-size: 30px;
 }
-
-
 
 /*END*/
