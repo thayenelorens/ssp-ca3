@@ -1,7 +1,7 @@
 {
   "name": "ssp-ca3-project",
   "version": "0.0.1",
-  "description": "Assignment to learn on how to use both server-side and client-side to develop a web application.",
+  "description": "Assignment on how to use both server-side and client-side to build an interactive web  application.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
