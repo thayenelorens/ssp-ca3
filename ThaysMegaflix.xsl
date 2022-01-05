@@ -1,14 +1,26 @@
 <?xml version="1.0"?> 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:template match="/">
-<!--I was not capable of inserting the metadata here, so I did it in the html file.-->
+
 <!--Using xslt to transform the xml file into html-->
 <html>
+<head>
+ <!-- Bootstrap CSS version 4.5.2 -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+   <!-- My CSS file-->
+   <link rel="stylesheet" type=text/css href="ThaysProject/css/style.css">
+
+   <!--Google fonts link - Bahiana-->
+   <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
+
+   <!--I was not capable of inserting the script metadata here, so I did it in the html file instead.-->
+</head>
 <body>
 
 <!--Embodying the table inside a div container.
-    Using Bootstrap 4 container-->
-    
+    Using Bootstrap 4 container-->   
 <!--This div embodies all my other divs-->
  <div class= "container">
  <!--Heading-->
@@ -29,13 +41,13 @@
                         <h1><span class="badge badge-primary">ITEM</span></h1>
                      </th>
                      <th>
-                        <h1><span class="badge badge-primary">TRAILER</span></h1>
+                        <h1 align="center"><span class="badge badge-primary">TRAILER</span></h1>
                      </th>
-                     <th></th>
+                    
                      <th>
                         <h1><span class="badge badge-primary">PRICE</span></h1>
                      </th>
-                     <th></th>
+                   
                   </tr>
                </thead>
         <!--Beginning of table body-->
@@ -61,7 +73,7 @@
                 <!--This block of code selects all the images from the xml file by the 'src' attribute
                 and also establishes alignment to the left and proper width to each image.
                 Part of the code was extracted from: https://stackoverflow.com/questions/13780145/inserting-images-from-xml-to-xsl-document
-                For the width part I only followed the logic from this block of code and from the block of code above (lines 54-57) -->  
+                For the width part I only followed the logic from this block of code and from the block of code above (lines 69-71) -->  
                          <td>                        
                     <xsl:element name="img">				
                     <xsl:attribute name="src">				
@@ -76,43 +88,19 @@
                          <h1><b><xsl:value-of select="dvd" /></b></h1>
                         </td>
                 
-                <!--Lines 79 - 100 were extracted from: 
-            https://www.tutorialrepublic.com/codelab.php?topic=faq&file=play-youtube-video-in-bootstrap-modal -->
+               <!--This link helped me build the code below: https://stackoverflow.com/questions/5235576/problems-with-embedding-youtube-with-xslt-transforms
+                    Just "wrapping" the iframe tag with the xsl tag was a bit tricky, this is something I had to think a lot by myself
+                    and it actually worked.-->
                         <td>
-                  <div class="bs-example">
-    <!-- Button HTML (to Trigger Modal) -->
-    <a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">Watch Trailer</a>
-    
-    <!-- Modal HTML -->
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">YouTube Video</h5>
-                    <button type="button" class="close" data-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="embed-responsive embed-responsive-16by9">
-
-               <!-- This line of code I changed by studying on how to select the links within the trailer tags. 
-               This question helped me link the idea from the bootstrap code with what I was willing to do for the loop
-               to function properly: https://stackoverflow.com/questions/5235576/problems-with-embedding-youtube-with-xslt-transforms-->
-                    
-                <!--The /embed for the trailer tag in the xml file was crucial for it to work-->
-                    <iframe id="movieTrailer" class="embed-responsive-item" width="560" height="315" src="{trailer}"></iframe>   
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>     
+                  <iframe width="400" 
+                        height="300" 
+                        src="{trailer}" 
+                        frameborder="0"><xsl:value-of select="trailer" /></iframe>   
                          </td>
-                <!--I could not add the attribute &nbsp; using xslt, so I did it in the html file.-->
-                          <td></td>
+                          
                 <!--This column will select and display the price of each DVD-->
                         <td>
-                           <h1><span class="badge badge-warning"><b><xsl:value-of select="price" /></b></span></h1>
-                            <td></td>   
+                           <h1><span class="badge badge-warning"><b><xsl:value-of select="price" /></b></span></h1>    
                         </td>
                     </tr>
 
@@ -130,26 +118,40 @@
     </table>
     <!--End of table-->
     </div>  
-    <!-- Using Bootstrap 4 jumbotron-->
+     <!-- Using Bootstrap 4 jumbotron-->
       <div class="jumbotron">
-<!--Using Bootstrap to create a 2 column grid system (50% each)-->
-  <div class="container-fluid">
-  <div class="row">
-  <!--First column is empty here. A photo will be added straight in the html file-->
-    <div class="col"></div>
-    <div class="col">
-    <button class="btn btn-primary" id="contact">Contact</button>
-    <!--Extra content will be added within this div in the html file-->
-    <div id="panel">
-   
-    <h2>CONTACT</h2>
-    </div>
-    </div>
-  </div>     
-        </div>
-        </div>
-        </div>
+         <!--Using Bootstrap to create a 2 column grid system (50% each)-->
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col">
+                  <!--This half of the grid will display the gif below-->
+                  <img src="ThaysProject/images/truman.gif"/>
+               </div>
+               <div class="col">
+                  <!--This button triggers a jQuery function that changes the behavior of the "panel" div below-->
+                  <!--I could not use the jQuery boilerplate in the head section of this document.
+                  I ended up pasting it straight in the HTML file and it worked there. However,when setting
+                  the command node index.js, it won't work due to the absence of the script in this file..-->
+                  <button class="btn btn-primary" id="contact">Contact</button>
+                  <div id="panel">
+                     <br>
+                     <p>Student name: Thayene Lorens</p>
+                     <p>Student number: 2020293</p>
+                     <!--target blank, opens link in a different page-->
+                     <p>Email: <a href="mailto:thayenelorens@gmail.com" title="Contact me" target=_blank
+                           class="btn btn-warning">thayenelorens@gmail.com</a></p>
+                     <p>Professor: Mikhail Timofeev</p>
+                     <!--target blank, opens link in a different page-->
+                     <p>Click here: <a href="https://github.com/thayenelorens/ssp-ca3.git" target="_blank"
+                           title="Github" target=_blank class="btn btn-warning">Github link</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </body>
+
 </html>
 </xsl:template>
 </xsl:stylesheet>
