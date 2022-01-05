@@ -18,9 +18,6 @@
    <!--Google fonts link - Bahiana-->
    <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
 
-   <!-- My JavaScript file - I opted to put this link in the head section by using the attribute "defer"-->
-   <script defer src="ThaysProject/js/script.js"></script>
-
    <!-- My JQuery file - I opted to put this link in the head section by using the attribute "defer"-->
    <script defer src="ThaysProject/js/myQuery.js"></script>
 
@@ -90,8 +87,11 @@
 
                   <!--Boostrap modal code was extracted from: https://www.tutorialrepublic.com/codelab.php?topic=faq&file=play-youtube-video-in-bootstrap-modal-->
                   <td>
+                     <!--Button to trigger Modal-->
                      <div class="bs-example"><a href="#myModal1" class="btn btn-primary btn-lg"
                            data-toggle="modal">Watch Trailer</a>
+
+                        <!--Modal HTML-->
                         <div id="myModal1" class="modal fade">
                            <div class="modal-dialog">
                               <div class="modal-content">
@@ -110,6 +110,7 @@
                         </div>
                      </div>
                   </td>
+                  <!--End of Modal-->
                   <td></td>
                   <td>
                      <h1><span class="badge badge-warning"><b>9.99</b></span></h1>
@@ -960,6 +961,8 @@
          </div>
       </div>
    </div>
+   <!-- My JavaScript file - I opted to put this link at the bottom of the code: without the attribute "defer"-->
+   <script src="ThaysProject/js/script.js"></script>
 </body>
 
 </html>
