@@ -16,6 +16,7 @@
    <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
 
    <!--I was not capable of inserting the script metadata here, so I did it in the html file instead.-->
+   <!--I even tried to use the script tag and insert some code with CDATA, but still unsuccessful.-->
 </head>
 <body>
 
