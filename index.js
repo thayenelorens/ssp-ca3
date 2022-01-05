@@ -1,5 +1,6 @@
 //This code was extrated from: https://github.com/mikhail-cct/ssp-practical/blob/main/index.js
 //It was done in class by the professor.
+//Everytime I apply the command node index.js, I have to install express agai
 
 const   http = require('http'), //This module provides the HTTP server functionalities
         path = require('path'), //The path module provides utilities for working with file and directory paths
@@ -12,7 +13,8 @@ const   http = require('http'), //This module provides the HTTP server functiona
 const   router = express(), 
         server = http.createServer(router);
 
-router.use(express.static(path.resolve(__dirname + '/'))); //We serve static content from "ThaysProject" folder
+//I used this link to try to troubleshoot the path below: https://stackoverflow.com/questions/18905872/expressjs-where-express-static-dirname-point-to
+router.use(express.static(path.resolve(__dirname +'/'))); //We serve static content from "ThaysProject" folder
 router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be encoded in a URL targeting our end point
 router.use(express.json()); //We include support for JSON
 
