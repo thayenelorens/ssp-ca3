@@ -1,6 +1,7 @@
 //This code was extrated from: https://github.com/mikhail-cct/ssp-practical/blob/main/index.js
-//It was done in class by the professor.
-//Everytime I apply the command node index.js, I have to install express agai
+//It was done in class by the professor. The comments below are part of his code as well.
+//Everytime I apply the command node index.js, I have to install express again by inserting in the terminal:
+    //npm install express --save (troubleshoot was extracted from: https://quizdeveloper.com/faq/throw-the-error-cannot-find-module-express-in-nodejs-aid2331)
 
 const   http = require('http'), //This module provides the HTTP server functionalities
         path = require('path'), //The path module provides utilities for working with file and directory paths
