@@ -47,6 +47,11 @@ Also adding a background-image.*/
     font-size: 32px;
 }
 
+.table_of_contents p {
+
+    font-size: 32px;
+}
+
 /*Increasing the font-size of all <h1> within the table element.*/
 #table h1 {
 
