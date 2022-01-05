@@ -34,7 +34,7 @@ function JSONtoXML(filename, obj, cb) {
     fs.writeFile(filepath, xml, cb);
 };
 
-router.get('/get/html', function(req, res) {
+router.get('/', function(req, res) {
 
     res.writeHead(200, {'Content-Type' : 'text/html'});
 
@@ -57,7 +57,7 @@ router.get('/get/html', function(req, res) {
     res.end(result.toString());
 
 });
-/*
+
 router.post('/post/json', function (req, res) {
 
     function appendJSON(obj) {
@@ -106,7 +106,7 @@ router.post('/post/delete', function (req, res) {
 
     res.redirect('back');
 
-});*/
+});
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
     const addr = server.address();
